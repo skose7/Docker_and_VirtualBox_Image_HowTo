@@ -9,7 +9,7 @@ docker run -i -t ubuntu:latest /bin/bash
 
 #After you see the '#' near your cursor a docker instance will have been initialised on your sytem.
 
-#From here you can add programs/envs/dependencies to this environment by first doing:
+#From here you can add programs/envs/dependencies to this environment, test the instance with the following example:
 
 apt-get update
 apt-get install python3
@@ -28,10 +28,10 @@ CONTAINER ID   IMAGE               COMMAND       CREATED         STATUS         
 77e75670c057   ubuntu:latest   "/bin/bash"   8 minutes ago   Exited (0) 6 seconds ago    
 
 #With the container ID you can now create an image of your docker instance with and name the image as you like: 
-sudo docker commit 7e20d89ce838 ubuntu:base_skose
+sudo docker commit 7e20d89ce838 ubuntu:base_name_of_your_choice
 
 #You will then have to run the image before it appears as you've named it with docker ps -l: 
-docker run -it ubuntu:base_skose
+docker run -it ubuntu:base_name_of_your_choice
 docker ps -l 
  
  #Now to share this container with others we do:
