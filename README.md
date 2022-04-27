@@ -1,3 +1,3 @@
 # Docker_and_VirtualBox_Image_HowTo
 
-Primer on setting up containers for students or professionals woh want to share their development/env set ups. 
+Primer on setting up containers for students or professionals who want to share their development/env set ups. VM is limited to uploading an aleady set up iimage, will include how to create the image soon. 
