@@ -1,0 +1,62 @@
+###Docker Container set up
+
+#Install docker
+https://docs.docker.com/desktop/mac/install/
+
+#In your terminal type: 
+docker run -i -t ubuntu:latest /bin/bash
+
+#After you see the '#' near your cursor a docker instance will have been initialised on your sytem.
+
+#From here you can add programs/envs/dependencies to this environment by first doing:
+
+apt-get update
+apt-get install python3
+test this installation with: python3 --version 
+apt-get install vim/emacs etc
+write a program and run it with vim to test python
+apt-get install lshw to see system info w lshw -short
+
+#Type exit to get out of your docker instance
+
+#Now to keep this instance as you've set it up in the above steps you obtain the container ID with:
+
+sudo docker ps –l
+
+CONTAINER ID   IMAGE               COMMAND       CREATED         STATUS                     PORTS     NAMES
+77e75670c057   ubuntu:latest   "/bin/bash"   8 minutes ago   Exited (0) 6 seconds ago    
+
+#With the container ID you can now create an image of your docker instance with and name the image as you like: 
+sudo docker commit 7e20d89ce838 ubuntu:base_skose
+
+#You will then have to run the image before it appears as you've named it with docker ps -l: 
+docker run -it ubuntu:base_skose
+docker ps -l 
+ 
+ #Now to share this container with others we do:
+ docker save -o <path for generated tar file> <image name>
+
+#For others to load this on their system they do the following: 
+docker load < ubuntu_base_skose.tar
+or 
+docker load -i <path to image tar file>
+
+#view images:
+docker images
+
+#To point docker to the directory with all samples files etc with:
+docker run -v ~/Desktop/my_data:/my_data -it image_name
+
+###VM Box Image load: 
+
+#Install VM 
+https://www.virtualbox.org/wiki/Downloads
+
+#On the main menu go to file > Import appliance 
+#Leave the top bar as local file system
+#On the bottom bar click on the right hand folder symbol, locate the image.ova file where you've save it. 
+#Press start to boot up the vm
+#Enter credentials
+#Click once on terminal on left hand side menu
+#Navigate to desktop/L2D file 
+#type jupyter-lab to start a jlab local instance on chrome
