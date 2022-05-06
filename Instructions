@@ -55,9 +55,9 @@ https://www.virtualbox.org/wiki/Downloads
 
 #On the main menu go to file > Import appliance 
 #Leave the top bar as local file system
-#On the bottom bar click on the right hand folder symbol, locate the image.ova file where you've save it. 
+#On the bottom bar click on the right hand folder symbol, locate the image.ova file where you've saved it. 
 #Press start to boot up the vm
-#Enter credentials
+#Enter credentials: L2D1234
 #Click once on terminal on left hand side menu
 #Navigate to desktop/L2D file 
 #type jupyter-lab to start a jlab local instance on chrome
